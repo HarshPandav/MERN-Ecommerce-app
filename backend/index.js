@@ -3,6 +3,7 @@ const express = require("express")
 const cors = require('cors')
 const connectDB = require("./config/db")
 const authRouter = require('./routes/auth.routes')
+const productRouter = require("./routes/product.routes")
 
 const app = express()
 app.use(express.json())
@@ -18,9 +19,9 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth',authRouter)
 app.use('/api/products',productRouter)
-app.use('/api/orders',orderRouter)
-app.use('/api/payment',paymentRouter)
-app.use('/api/analytics',analyticRouter)
+// app.use('/api/orders',orderRouter)
+// app.use('/api/payment',paymentRouter)
+// app.use('/api/analytics',analyticRouter)
 
 app.listen(PORT, () => {
     console.log(`server is running at port ${PORT}`);
