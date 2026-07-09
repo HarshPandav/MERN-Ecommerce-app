@@ -4,6 +4,7 @@ const cors = require('cors')
 const connectDB = require("./config/db")
 const authRouter = require('./routes/auth.routes')
 const productRouter = require("./routes/product.routes")
+const orderRouter = require('./routes/order.routes')
 
 const app = express()
 app.use(express.json())
@@ -19,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth',authRouter)
 app.use('/api/products',productRouter)
-// app.use('/api/orders',orderRouter)
+app.use('/api/orders',orderRouter)
 // app.use('/api/payment',paymentRouter)
 // app.use('/api/analytics',analyticRouter)
 
