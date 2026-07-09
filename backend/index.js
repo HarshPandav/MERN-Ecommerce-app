@@ -5,6 +5,8 @@ const connectDB = require("./config/db")
 const authRouter = require('./routes/auth.routes')
 const productRouter = require("./routes/product.routes")
 const orderRouter = require('./routes/order.routes')
+const paymentRouter = require('./routes/payment.routes')
+const analyticRouter = require("./routes/analyic.routes")
 
 const app = express()
 app.use(express.json())
@@ -18,11 +20,11 @@ app.get('/', (req, res) => {
     res.send("we are good to go !");
 })
 
-app.use('/api/auth',authRouter)
-app.use('/api/products',productRouter)
-app.use('/api/orders',orderRouter)
-// app.use('/api/payment',paymentRouter)
-// app.use('/api/analytics',analyticRouter)
+app.use('/api/auth', authRouter)
+app.use('/api/products', productRouter)
+app.use('/api/orders', orderRouter)
+app.use('/api/payment', paymentRouter)
+app.use('/api/analytics', analyticRouter)
 
 app.listen(PORT, () => {
     console.log(`server is running at port ${PORT}`);
