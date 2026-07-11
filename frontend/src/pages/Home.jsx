@@ -1,45 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import ProductCard from '../components/ProductCard'
+import React, { useEffect, useState } from 'react';
+import ProductCard from '../components/ProductCard';
 
 const Home = () => {
-
-  const [product, setProduct] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('api/products')
-        const data = await response.json()
-        setProducts(data.slice(0, 4))
+        const res = await fetch('/api/products');
+        const data = await res.json();
+        setProducts(data.slice(0, 4)); // Featured products
       } catch (error) {
         console.error(error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-
-    fetchProducts()
-  }, [])
+    };
+    fetchProducts();
+  }, []);
 
   return (
-    <div className='home-container'>
+    <div className="home-container">
       <div className="hero-banner">
         <h1>Welcome to FlyCart</h1>
-        <p>Explore our product. quality is our first priority</p>
+        <p>Explore our Products. Quality is our first priority</p>
       </div>
-      {loading? (
+      <h2>Featured Products</h2>
+      {loading ? (
         <div>Loading...</div>
-      ):(
+      ) : (
         <div className="product-grid">
-          {product.map((product) => (
-            <ProductCard key={product._id} product={product} ></ProductCard>
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product} />
           ))}
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
