@@ -6,6 +6,8 @@ import Footer from './components/Footer'
 import Disclaimer from './pages/Disclaimer'
 import ReturnPolicy from './pages/ReturnPolicy'
 import About from './pages/About'
+import Register from './pages/Register'
+import Login from './pages/Login'
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path='/disclaimer' element={<Disclaimer/>}></Route>
         <Route path='/return' element={<ReturnPolicy/>}></Route>
         <Route path='/about' element={<About/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
       </Routes>
       <Footer/>
     </Router>
