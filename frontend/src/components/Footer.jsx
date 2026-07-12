@@ -1,36 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer style={{
-      background: '#09090b',
-      borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-      padding: '40px 20px',
-      marginTop: 'auto'
-    }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '20px'
-      }}>
+    <footer className="mt-auto border-t border-slate-200 bg-white">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between">
+        
         <div>
-          <h3 style={{ color: '#f97316', marginBottom: '10px' }}>FlyCart</h3>
-          <p style={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Premium E-Commerce Platform.</p>
+          <Link to="/" className="text-2xl font-bold text-slate-900">
+            Fly<span className="text-blue-600">Cart</span>
+          </Link>
+
+          <p className="mt-3 text-sm text-slate-500">
+            Shop smarter. Shop faster.
+          </p>
         </div>
-        
-        <div style={{ display: 'flex', gap: '20px' }}>
-          <Link to="/about" style={{ color: '#a1a1aa', fontSize: '0.9rem' }}>About Us</Link>
-          <Link to="/return" style={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Return Policy</Link>
-          <Link to="/disclaimer" style={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Disclaimer</Link>
+
+        <div className="flex flex-wrap gap-6">
+          <Link
+            to="/about"
+            className="text-sm font-medium text-slate-500 transition hover:text-blue-600"
+          >
+            About Us
+          </Link>
+
+          <Link
+            to="/return"
+            className="text-sm font-medium text-slate-500 transition hover:text-blue-600"
+          >
+            Return Policy
+          </Link>
+
+          <Link
+            to="/disclaimer"
+            className="text-sm font-medium text-slate-500 transition hover:text-blue-600"
+          >
+            Disclaimer
+          </Link>
         </div>
-        
-        <div style={{ color: '#a1a1aa', fontSize: '0.9rem' }}>
-          &copy; {new Date().getFullYear()} FlyCart. All rights reserved.
-        </div>
+
+        <p className="text-sm text-slate-500">
+          © {new Date().getFullYear()} FlyCart. All rights reserved.
+        </p>
+
       </div>
     </footer>
   );
