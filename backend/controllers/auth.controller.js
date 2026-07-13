@@ -28,18 +28,11 @@ const registerUser = async (req, res) => {
         const user = await User.create({name, email, password: hashedPassword})
 
         if (user) {
-            const otp = Math.floor(100000 + Math.random() * 900000).toString()
-
+            
             const message = `
             Hello ${name},
             Welcome to E-Commerce! 🎉
             Thank you for creating your account.
-            Your One-Time Password (OTP) for email verification is:
-            ${otp}
-            This OTP is valid for the next 10 minutes. Please do not share it with anyone for security reasons.
-            If you did not create this account, you can safely ignore this email.
-            Best regards,
-            The E-Commerce Team
             `;
             
             await sendEmail(email, "Welcome", message)
