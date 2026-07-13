@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { removeFromCart, addToCart } from "../redux/cartSlice";
+import { removeFromCart, addToCart, clearCart } from "../redux/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -34,6 +34,12 @@ const Cart = () => {
         <p className="mt-2 text-slate-500">
           Review and manage your selected products.
         </p>
+        <button
+          onClick={() => dispatch(clearCart())}
+          className="mt-7 w-[30vh] rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-md transition hover:-translate-y-1 hover:bg-blue-700 hover:shadow-lg"
+        >
+          Clear Cart →
+        </button>
       </div>
 
       {cartItems.length === 0 ? (
@@ -124,7 +130,6 @@ const Cart = () => {
             ))}
           </div>
 
-          {/* Order Summary */}
           <div>
             <div className="sticky top-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="text-2xl font-bold text-slate-900">

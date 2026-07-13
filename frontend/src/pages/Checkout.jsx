@@ -26,7 +26,6 @@ const Checkout = () => {
       const orderData = await orderRes.json();
 
       if (!orderRes.ok) {
-        // Razorpay unconfigured exception handler
         const fallback = window.confirm("Razorpay keys unconfigured on backend. Use Student Bypass Mode to place test order?");
         if (fallback) {
           return bypassPayment();
@@ -253,7 +252,6 @@ const Checkout = () => {
           </div>
         </div>
 
-        {/* Payment Summary */}
         <div className="mt-10 rounded-2xl bg-blue-50 p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>

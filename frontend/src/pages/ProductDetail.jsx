@@ -83,7 +83,7 @@ const ProductDetail = () => {
           <img
             src={product.imageUrl}
             alt={product.name}
-            className="h-full max-h-[550px] w-full object-cover transition duration-500 hover:scale-105"
+            className="h-full max-h-137.5 w-full object-cover transition duration-500 hover:scale-105"
           />
         </div>
 
