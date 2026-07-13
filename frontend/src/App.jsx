@@ -13,6 +13,8 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
+import Shop from "./pages/Shop";
+import Profile from "./pages/Profile";
 
 const App = () => {
   return (
@@ -32,6 +34,8 @@ const App = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/ordersuccess" element={<OrderSuccess />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
 

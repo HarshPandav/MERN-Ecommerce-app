@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -35,7 +37,7 @@ const Home = () => {
             experience with FlyCart.
           </p>
 
-          <button className="mt-8 rounded-xl bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+          <button onClick={() => navigate('/shop')} className="mt-8 rounded-xl bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
             Shop Now →
           </button>
         </div>
