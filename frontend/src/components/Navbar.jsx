@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
+    console.log("USER:", user);
   const cartItems = useSelector((state) => state.cart.cartItems);
   const navigate = useNavigate();
 
@@ -79,7 +80,7 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={handleLogout}
-                  className="rounded-lg border border-red-200 px-3 py-2 text-sm font-semibold text-red-500 transition hover:bg-red-50 md:px-5"
+                  className="rounded-lg border border-red-200 px-3 py-2 text-sm font-semibold text-red-500  transition hover:bg-red-600 hover:text-white md:px-5"
                 >
                   Logout
                 </button>

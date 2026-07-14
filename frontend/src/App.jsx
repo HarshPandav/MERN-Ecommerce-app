@@ -15,6 +15,7 @@ import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
 import Shop from "./pages/Shop";
 import Profile from "./pages/Profile";
+import AdminDashboard from "./admin/AdminDashboard";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/ordersuccess" element={<OrderSuccess />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/admin" element={<AdminDashboard />} />
           </Routes>
         </main>
 
