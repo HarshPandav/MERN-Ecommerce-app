@@ -141,7 +141,7 @@ const AdminDashboard = () => {
           <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-blue-600" />
 
           <p className="mt-4 font-medium text-slate-500">
-            Loading metrics...
+            Loading Informations...
           </p>
         </div>
       )}
