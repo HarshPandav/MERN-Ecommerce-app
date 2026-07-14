@@ -26,7 +26,7 @@ const Register = () => {
 
       if (res.ok) {
         alert("Registration completed successfully");
-        login(data);
+        login(data.user);
         navigate("/");
       } else {
         alert(data.message);
