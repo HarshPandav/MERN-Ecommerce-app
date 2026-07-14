@@ -31,7 +31,7 @@ const createProduct = async (req, res) => {
         let imageUrl = ''
         if (req.file) {
             const result = await cloudinary.uploader.upload(req.file.path)
-            console.log(result)            
+            // console.log(result)            
             imageUrl = result.secure_url
         }
         const product = new Product({

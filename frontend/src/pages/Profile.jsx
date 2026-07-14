@@ -51,11 +51,11 @@ const Profile = () => {
   };
 
   const getStatusStyle = (status) => {
-    if (status === "Delivered") {
+    if (status === "delivered") {
       return "bg-emerald-100 text-emerald-700";
     }
 
-    if (status === "Shipped") {
+    if (status === "shipped") {
       return "bg-blue-100 text-blue-700";
     }
 

@@ -70,7 +70,7 @@ const updateOrderStatus = async (req, res) => {
     try {
         const {status} = req.body
         const order = await Order.findById(req.params.id)
-        console.log(req.params.id);
+        // console.log(req.params.id);
         
         if (order) {
             order.status = status

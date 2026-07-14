@@ -17,6 +17,7 @@ import Shop from "./pages/Shop";
 import Profile from "./pages/Profile";
 import AdminDashboard from "./admin/AdminDashboard";
 import AdminUsers from "./admin/AdminUsers";
+import AdminOrders from "./admin/AdminOrders";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/users" element={<AdminUsers />} />
+            <Route path="/admin/orders" element={<AdminOrders />} />
           </Routes>
         </main>
 
