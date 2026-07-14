@@ -24,7 +24,6 @@ const AdminUsers = () => {
   return (
     <div className="mx-auto min-h-[75vh] max-w-7xl px-5 py-12">
 
-      {/* Header */}
       <div className="mb-10">
         <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
           FlyCart Admin
@@ -39,14 +38,12 @@ const AdminUsers = () => {
         </p>
       </div>
 
-      {/* User Count */}
       <div className="mb-6">
         <span className="inline-flex rounded-xl bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
           Total Users: {users.length}
         </span>
       </div>
 
-      {/* Table */}
       <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div className="overflow-x-auto">
           <table className="w-full text-left">
@@ -76,15 +73,15 @@ const AdminUsers = () => {
             </thead>
 
             <tbody className="divide-y divide-slate-200">
-              {users.map((u) => (
+              {users.map((user) => (
                 <tr
-                  key={u._id}
+                  key={user._id}
                   className="transition hover:bg-blue-50/50"
                 >
-                  {/* ID */}
+
                   <td className="whitespace-nowrap px-6 py-5">
                     <span className="rounded-lg bg-slate-100 px-3 py-1 font-mono text-sm text-slate-600">
-                      {u._id.substring(0, 8)}...
+                      {user._id.substring(0, 8)}...
                     </span>
                   </td>
 
@@ -92,35 +89,35 @@ const AdminUsers = () => {
                   <td className="whitespace-nowrap px-6 py-5">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 font-bold uppercase text-blue-600">
-                        {u.name?.charAt(0)}
+                        {user.name?.charAt(0)}
                       </div>
 
                       <span className="font-semibold text-slate-900">
-                        {u.name}
+                        {user.name}
                       </span>
                     </div>
                   </td>
 
                   {/* Email */}
                   <td className="whitespace-nowrap px-6 py-5 text-slate-500">
-                    {u.email}
+                    {user.email}
                   </td>
 
                   {/* Role */}
                   <td className="whitespace-nowrap px-6 py-5">
                     <span
                       className={`inline-flex rounded-full px-3 py-1 text-xs font-bold uppercase ${
-                        u.role === "admin"
+                        user.role === "admin"
                           ? "bg-violet-100 text-violet-700"
                           : "bg-emerald-100 text-emerald-700"
                       }`}
                     >
-                      {u.role}
+                      {user.role}
                     </span>
                   </td>
 
                   <td className="whitespace-nowrap px-6 py-5 text-slate-500">
-                    {new Date(u.createdAt).toLocaleDateString()}
+                    {new Date(user.createdAt).toLocaleDateString()}
                   </td>
                 </tr>
               ))}

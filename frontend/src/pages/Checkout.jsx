@@ -26,7 +26,7 @@ const Checkout = () => {
       const orderData = await orderRes.json();
 
       if (!orderRes.ok) {
-        const fallback = window.confirm("Razorpay keys unconfigured on backend. Use Student Bypass Mode to place test order?");
+        const fallback = window.confirm("Razorpay keys not working");
         if (fallback) {
           return bypassPayment();
         } else {

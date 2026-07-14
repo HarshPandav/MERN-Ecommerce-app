@@ -67,10 +67,8 @@ const Profile = () => {
   return (
     <div className="mx-auto min-h-[75vh] max-w-6xl px-5 py-12">
       
-      {/* Profile Card */}
       <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-10">
         
-        {/* Profile Header */}
         <div className="flex flex-col gap-6 border-b border-slate-200 pb-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
@@ -104,13 +102,12 @@ const Profile = () => {
 
           <button
             onClick={handleLogout}
-            className="rounded-xl border border-red-200 px-6 py-3 font-semibold text-red-500 transition hover:bg-red-50 hover:text-red-600"
+            className="rounded-xl border border-red-200 px-6 py-3 font-semibold text-red-500 transition hover:bg-red-600 hover:text-white"
           >
             Logout
           </button>
         </div>
 
-        {/* Order History */}
         <div className="mt-10">
           <div className="mb-7">
             <h2 className="text-2xl font-bold text-slate-900">
