@@ -85,7 +85,6 @@ const AdminUsers = () => {
                     </span>
                   </td>
 
-                  {/* Name */}
                   <td className="whitespace-nowrap px-6 py-5">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 font-bold uppercase text-blue-600">
@@ -98,12 +97,10 @@ const AdminUsers = () => {
                     </div>
                   </td>
 
-                  {/* Email */}
                   <td className="whitespace-nowrap px-6 py-5 text-slate-500">
                     {user.email}
                   </td>
 
-                  {/* Role */}
                   <td className="whitespace-nowrap px-6 py-5">
                     <span
                       className={`inline-flex rounded-full px-3 py-1 text-xs font-bold uppercase ${

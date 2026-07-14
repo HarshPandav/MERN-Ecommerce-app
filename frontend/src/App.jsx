@@ -18,6 +18,8 @@ import Profile from "./pages/Profile";
 import AdminDashboard from "./admin/AdminDashboard";
 import AdminUsers from "./admin/AdminUsers";
 import AdminOrders from "./admin/AdminOrders";
+import AdminProducts from "./admin/AdminProducts";
+import AddProduct from "./admin/AddProduct";
 
 const App = () => {
   return (
@@ -42,6 +44,8 @@ const App = () => {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/users" element={<AdminUsers />} />
             <Route path="/admin/orders" element={<AdminOrders />} />
+            <Route path="/admin/products" element={<AdminProducts />} />
+            <Route path="/admin/add-product" element={<AddProduct />} />
           </Routes>
         </main>
 
