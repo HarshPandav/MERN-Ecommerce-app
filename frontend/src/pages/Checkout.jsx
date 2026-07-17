@@ -33,9 +33,10 @@ const Checkout = () => {
           return alert("Payment failed to initialize");
         }
       }
+      const razorpayKey = import.meta.env.VITE_RAZORPAY_KEY_ID
 
       const options = {
-        key: 'rzp_test_TBN1kwDu30WRt0',
+        key: razorpayKey,
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'FlyCart',
